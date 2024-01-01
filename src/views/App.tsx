@@ -5,40 +5,43 @@ import MyComponent from '../components/MyComponent'
 import ToDoList from "./Todos/ToDoList"
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavbarComponent from "./Navbar/NavbarComponent"
+import {
+    Route,
+    Link,
+    BrowserRouter, Routes
+} from "react-router-dom"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {/*<MyComponent />*/}
-        <ToDoList/>
-      </header>
-      <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="colored"
-      />
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <header className="App-header">
+                    <NavbarComponent/>
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <Routes>
+                        <Route path="/" element={<MyComponent />} />
+                        <Route path="/todo" element={<ToDoList />} />
+                    </Routes>
+                    {/*<MyComponent />*/}
+                    {/*<ToDoList/>*/}
+                </header>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="colored"
+                />
+            </div>
+        </BrowserRouter>
+    )
 }
 
 export default App;
