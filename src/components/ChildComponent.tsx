@@ -3,7 +3,7 @@ import '../styles/childComponent.scss'
 
 class ChildComponent extends React.Component<{name: any, age: any, jobs: any, deleteJob: any}> {
     state = {
-        showJobs: true
+        showJobs: false
     }
     showJobs = () => {
         this.setState({

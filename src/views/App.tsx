@@ -3,15 +3,15 @@ import logo from './logo.svg'
 import './App.scss'
 import MyComponent from '../components/MyComponent'
 import ToDoList from "./Todos/ToDoList"
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavbarComponent from "./Navbar/NavbarComponent"
 import {
     Route,
-    Link,
     BrowserRouter, Routes
 } from "react-router-dom"
+import ListUser from "./Users/ListUser"
 
 function App() {
     return (
@@ -23,6 +23,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<MyComponent />} />
                         <Route path="/todo" element={<ToDoList />} />
+                        <Route path="/user" element={<ListUser />} />
                     </Routes>
                     {/*<MyComponent />*/}
                     {/*<ToDoList/>*/}
@@ -44,4 +45,4 @@ function App() {
     )
 }
 
-export default App;
+export default App

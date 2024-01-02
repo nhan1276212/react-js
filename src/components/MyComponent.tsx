@@ -1,7 +1,8 @@
 import React from 'react'
-import ChildComponent from "./ChildComponent";
-import MyFunctionComponent from "./MyFunctionComponent";
-import FormComponent from "./FormComponent";
+import ChildComponent from "./ChildComponent"
+import MyFunctionComponent from "./MyFunctionComponent"
+import FormComponent from "./FormComponent"
+import Color from "./Color/Color";
 
 class MyComponent extends React.Component {
     state = {
@@ -102,5 +103,5 @@ class MyComponent extends React.Component {
     }
 }
 
-export default MyComponent
+export default Color(MyComponent)
 
