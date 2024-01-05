@@ -12,8 +12,9 @@ import {
     BrowserRouter, Routes
 } from "react-router-dom"
 import ListUser from "./Users/ListUser"
+import FunctionComponent from "../components/Hook/FunctionComponent";
 
-function App() {
+const App = () => {
     return (
         <BrowserRouter>
             <div className="App">
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/" element={<MyComponent />} />
                         <Route path="/todo" element={<ToDoList />} />
                         <Route path="/user" element={<ListUser />} />
+                        <Route path="/function" element={<FunctionComponent />} />
                     </Routes>
                     {/*<MyComponent />*/}
                     {/*<ToDoList/>*/}
